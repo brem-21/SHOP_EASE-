@@ -39,3 +39,13 @@ Jupyter Notebook for interactive Python development and data analysis.
 
 
 ![Screenshot (1)](https://github.com/user-attachments/assets/747f1aad-21ba-4286-bf19-8cddd83366c7)
+
+
+Screenshots of execution plans with explain
+![alt text](image.png)
+
+Returning an execution plan showing whether the database is performing a full table scan
+![alt text](image-1.png)
+
+Query Performance
+![alt text](image-2.png)

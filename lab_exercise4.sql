@@ -33,3 +33,15 @@ CREATE INDEX idx_customer_id_group ON orders(customer_id);
 CREATE INDEX idx_order_date_group ON orders(order_date);
 
 -- Lab 4 exercise 4.3
+describe INVENTORY;
+ALTER TABLE inventory 
+ADD COLUMN supplier_id INT;
+
+
+EXPLAIN SELECT * FROM inventory WHERE supplier_id = 123;
+
+
+-- Lab exercise 4.5
+SET profiling = 1;
+SELECT * FROM inventory WHERE supplier_id = 123;
+SHOW PROFILE FOR QUERY 1;
