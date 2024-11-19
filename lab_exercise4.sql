@@ -41,5 +41,5 @@ CREATE INDEX idx_order_date_group ON orders(order_date);
 
 -- Lab exercise 4.5
 SET profiling = 1;
-SELECT * FROM inventory WHERE supplier_id = 123;
-SHOW PROFILE FOR QUERY 1;
+SHOW PROFILES;
+SHOW PROFILE FOR QUERY 8;
