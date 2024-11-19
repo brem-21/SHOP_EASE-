@@ -34,12 +34,23 @@ MySQL for database management and SQL querying.
 SQL for writing complex queries, subqueries, and using window functions.
 Jupyter Notebook for interactive Python development and data analysis.
 
-## SALES DATA IN SQL DATABASE
+##  DATA IN SQL DATABASE
 ![Screenshot (2)](https://github.com/user-attachments/assets/135f645c-a0a0-43e0-bcdd-8cc71f0340e3)
 
 
 ![Screenshot (1)](https://github.com/user-attachments/assets/747f1aad-21ba-4286-bf19-8cddd83366c7)
 
+![alt text](image-3.png)
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+![alt text](image-6.png)
+
+![alt text](image-7.png)
+
+![alt text](image-8.png)
 
 Screenshots of execution plans with explain
 ![alt text](image.png)
