@@ -43,49 +43,41 @@ Jupyter Notebook for interactive Python development and data analysis.
 ### SUPPLIERS TABLE
 Columns:
 id, supplier_name, supplier_address, email, contact_number, fax, account_number, order_history, contract, supplier_country, supplier_city, country_code
-![alt text](image-3.png)
+![alt text](Images/image-4.png)
 
 
 ### SALES TABLE
 Columns:
 Customer_id, customer_name, email, join_date, order_id, order_date, product_id, quantity, product_name, category, price, year, month, day, total_revenue
-![alt text](image-4.png)
+![alt text](Images/image-4.png)
 
 ### PRODUCTS TABLE
 Columns:
 Product_id, product_name, category, price
 
-![alt text](image-5.png)
+![alt text](Images/image-5.png)
 
 ### ORDERS TABLE
 Columns:
 order_id, customer_id, order_date, product_id, quantity
 
-![alt text](image-6.png)
+![alt text](Images/image-6.png)
 
 ### ORDER_ITEMS TABLE
 Columns:
 order_detail_id, order_id, quantity, product_id
 
-![alt text](image-7.png)
+![alt text](Images/image-7.png)
 
 ### CUSTOMERS TABLE
 Columns:
 Customer_id, customer_name, email, join_date
 
-![alt text](image-8.png)
+![alt text](Images/image-8.png)
 
 ### INVENTORY TABLE
 Columns:
 product_name, stock_quantity, stock_date, supplier, warehouse_location
 
-![alt text](image-9.png)
+![alt text](Images/image-9.png)
 
-Screenshots of execution plans with explain
-![alt text](image.png)
-
-Returning an execution plan showing whether the database is performing a full table scan
-![alt text](image-1.png)
-
-Query Performance
-![alt text](image-2.png)
