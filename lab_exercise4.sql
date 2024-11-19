@@ -37,9 +37,25 @@ CREATE INDEX idx_order_date_group ON orders(order_date);
 
 
 -- lab4 4.4
+-- Implementation partitioning by RANGE
+SELECT CONVERT(total_revenue, SIGNED) AS total_sales FROM shop_ease.sales;
+ALTER TABLE shop_ease.sales ADD COLUMN total_sales INT;
+ALTER TABLE sales
+PARTITION BY RANGE (total_sales) (
+    PARTITION p_low VALUES LESS THAN (1000),   -- Small revenue
+    PARTITION p_medium VALUES LESS THAN (5000), -- Medium revenue
+    PARTITION p_high VALUES LESS THAN (10000),  -- Large revenue
+    PARTITION p_vhigh VALUES LESS THAN (100000)  -- Very large revenue
+);
+-- Implementation of partitioning by HASH
 
+ALTER TABLE sales
+PARTITION BY HASH (customer_id)
+PARTITIONS 4;
 
 -- Lab exercise 4.5
 SET profiling = 1;
 SHOW PROFILES;
 SHOW PROFILE FOR QUERY 8;
+
+-- bottlenecks
