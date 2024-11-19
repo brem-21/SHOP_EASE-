@@ -58,4 +58,5 @@ SET profiling = 1;
 SHOW PROFILES;
 SHOW PROFILE FOR QUERY 8;
 
--- bottlenecks
+-- bottleneck
+-- CPU
