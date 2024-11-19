@@ -52,6 +52,8 @@ Jupyter Notebook for interactive Python development and data analysis.
 
 ![alt text](image-8.png)
 
+![alt text](image-9.png)
+
 Screenshots of execution plans with explain
 ![alt text](image.png)
 
