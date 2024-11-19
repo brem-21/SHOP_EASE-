@@ -1,5 +1,7 @@
 CREATE DATABASE shop_ease;
 
+SET SQL_SAFE_UPDATES = 0;
+
 USE shop_ease;
 
 CREATE TABLE sales(
@@ -78,3 +80,13 @@ SELECT * FROM shop_ease.orders;
 SELECT * FROM shop_ease.products;
 SELECT * FROM shop_ease.suppliers;
 SELECT * FROM shop_ease.order_items;
+
+INSERT INTO order_items (order_detail_id, product_id, quantity)
+VALUES (1, 456, 10);
+
+ALTER TABLE inventory ADD COLUMN product_id INT;
+
+ALTER TABLE customer
+ADD COLUMN customer_status VARCHAR(50);
+
+CALL UpdateCustomerStatus(123);

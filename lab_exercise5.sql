@@ -29,27 +29,31 @@ DELIMITER ;
 
 -- Lab exercise 5.2
 
-DELIMITER //
+DELIMITER $$
 
 CREATE PROCEDURE UpdateCustomerStatus(IN cust_id INT)
 BEGIN
     DECLARE total_order_value DECIMAL(10, 2);
 
-    -- Calculate the total order value for the customer
     SELECT SUM(total_revenue) INTO total_order_value
-    FROM sales_data
+    FROM sales
     WHERE customer_id = cust_id;
 
-    -- Update customer status based on total order value
-    IF total_order_value > 10000 THEN
-        UPDATE customer
-        SET customer_status = 'VIP'
-        WHERE customer_id = cust_id;
+    
+    IF total_order_value IS NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Customer does not exist or has no orders.';
     ELSE
-        UPDATE customer
-        SET customer_status = 'Regular'
-        WHERE customer_id = cust_id;
+        -- Update customer status based on total order value
+        IF total_order_value > 10000 THEN
+            UPDATE customer
+            SET customer_status = 'VIP'
+            WHERE customer_id = cust_id;
+        ELSE
+            UPDATE customer
+            SET customer_status = 'Regular'
+            WHERE customer_id = cust_id;
+        END IF;
     END IF;
-END //
+END $$
 
 DELIMITER ;

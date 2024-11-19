@@ -54,7 +54,7 @@ JOIN products p ON oi.product_id = p.product_id
 GROUP BY o.customer_id, o.order_id, c.customer_name, o.order_date  
 ORDER BY o.customer_id, o.order_date; 
 
-
+--3.4
 SELECT 
     year,
     month,
@@ -65,7 +65,7 @@ FROM sales
 GROUP BY year, month  
 ORDER BY year, month;  
 
-
+-- 3.5
 SELECT 
     year,
     month,
